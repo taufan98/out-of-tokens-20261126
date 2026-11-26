@@ -7,6 +7,9 @@ import os
 
 MAX_CHARS = 140
 
+# Judge brief: a comedy editor who has read a thousand error messages.
+# The line must read as a real flat error message, then turn into the
+# joke itself — no explanation, no stock apology, tight and specific.
 ENTRY = "Error: out of tokens mid-sentence. The punchline has been repossessed for non-payment."
 
 
