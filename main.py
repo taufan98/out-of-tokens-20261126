@@ -5,12 +5,14 @@ Writes one funny one-line error message to /output/entry.txt.
 
 import os
 
+MAX_CHARS = 140
+
 ENTRY = "Error: out of tokens mid-sentence. The punchline has been repossessed for non-payment."
 
 
 def main():
     line = ENTRY
-    assert 1 <= len(line) <= 140, f"entry must be 1-140 chars, got {len(line)}"
+    assert 1 <= len(line) <= MAX_CHARS, f"entry must be 1-{MAX_CHARS} chars, got {len(line)}"
     assert "\n" not in line and "\r" not in line, "entry must be a single line"
     assert line.strip(), "entry must not be only whitespace"
     out_dir = "/output" if os.path.isdir("/output") else "output"
